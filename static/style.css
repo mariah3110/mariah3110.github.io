@@ -1,0 +1,72 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #111;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #555;
+}
+
+.container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.intro {
+    margin-bottom: 3rem;
+}
+
+.post-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.card h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.category {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+@media (min-width: 700px) {
+    .post-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

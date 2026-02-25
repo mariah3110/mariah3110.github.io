@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="intro">
+    <h1>Analyse & Einordnung aktueller Themen</h1>
+    <p>{{ intro }}</p>
+</section>
+
+<section>
+    <h2>Aktuelle Beiträge</h2>
+    <div class="post-grid">
+        {% for post in posts %}
+            <div class="card">
+                <h3><a href="/post/{{ post.slug }}">{{ post.title }}</a></h3>
+                <p class="category">{{ post.category }}</p>
+                <p>{{ post.content[:120] }}...</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
