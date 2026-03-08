@@ -92,12 +92,90 @@ body {
 }
 
 .card {
+    position: relative;
     background: white;
-    padding: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
     border-radius: 14px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
     width: 100%;
+}
+
+/* Grundlabel */
+
+.label {
+    position: relative;
+    display: inline-block;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    cursor: help;
+}
+
+/* Fakten */
+
+.label.fakten {
+    color: #2e7d32;
+}
+
+/* Einordnung */
+
+.label.einordnung {
+    color: #ef6c00;
+}
+
+/* Tooltip */
+
+.label::after {
+    content: attr(data-info);
+
+    position: absolute;
+    top: 50%;
+    left: 110%;
+
+    transform: translateY(-50%) translateX(5px);
+
+    width: 220px;
+
+    padding: 8px 10px;
+    border-radius: 6px;
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.label::after {
+    z-index: 10;
+}
+
+.label.fakten::after {
+    background: #2e7d32;
+    color: white;
+}
+
+.label.einordnung::after {
+    background: #ef6c00;
+    color: white;
+}
+
+/* Hover Effekt */
+
+.label:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+sup {
+    font-size: 0.75em;
+    vertical-align: super;
 }
 
 p{
