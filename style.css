@@ -202,6 +202,11 @@ p{
     display: inline-block;
     text-decoration: none;
     color: #555;
+    background-color: #eaeaea;
+
+    padding: 0rem 0.4rem 0rem 0.4rem;
+    border-radius: 1rem;
+
     font-size: 0.85rem;
     word-break: break-all;
     transition: color 0.2s ease, transform 0.2s ease;
